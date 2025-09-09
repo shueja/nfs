@@ -4,11 +4,108 @@
 </head>
 <body>
     <style>
-        .cover {
-            aspect-ratio: 1 1;
-            background-color:aqua;
-            width:calc(min(80vh, 400px));
+        body {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            width:100vw;
+            height:100vh;
+            overflow:hidden;
+            background-image: linear-gradient(to bottom, #2185c0, #2972a6, #2b5f8d, #294e74, #253d5c, #27324c, #25273c, #201e2d, #1e1722, #191118, #10090d, #000000);
+            margin:0;
+            padding: 16px;
+            box-sizing: border-box;
+            color: white;
+            font-family: Helvetica, sans-serif;
+            font-size: xx-large;
         }
+        h3 {
+            color: gray;
+        }
+        .cover {
+            aspect-ratio: 1/1;
+            background-image: url("cover.jpg");
+            background-size: cover;
+            width:75vw;
+            margin-block: 7vh;
+            border-radius: 16px;
+            box-shadow: black 3px;
+            position:relative;
+        }
+        .controls {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+        .controls svg{
+            aspect-ratio: 1/1;
+            width:7vw;
+            fill:currentColor;
+            padding-top: 16px;
+        }
+        .playbar {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+            gap: 16px;
+        }
+        .chip {
+            position:absolute;
+            top: -100px;
+            right: -100px;
+            aspect-ratio: 1/1;
+            width:min-content;
+            background-color: #1f5f43;
+            border-radius: 30%;
+            padding: 16px;
+            text-align: center;
+            box-shadow: black 10px;
+            display: flex;
+            align-content: baseline;
+        }
+        .title {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: center;
+            gap: 16px;
+            margin-block: 16px;
+        }
+        
     </style>
-    <div class="cover">
+    <div class="page">
+        <div class="cover">
+            <div class="chip">
+                <!-- crown -->
+                <span style="font-size: 4em;"><b>#3</b></span>
+            </div>
+        </div>
+        <div class="title">
+            <div class="info">
+                <span style="font-size: 2em;"><b>Heartbeat</b></span>
+                <h3>Cash Sterling ft. Carter Blaze</h3>
+                <span><b>2025 • 2:39 • 2,146,890</b></span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="150px" viewBox="0 -960 960 960" width="150px" fill="#bd2929"><path d="m479-87-58-52Q312-239 241.5-311.5T129-441.5q-42-57.5-58.5-105T54-643q0-101 67.5-169T289-880q56 0 104 24t86 71q44-50 90-72.5T669-880q101 0 169 68t68 169q0 49-16.5 96T831-442.5Q789-385 718-312T538-139l-59 52Z"/></svg>
+        </div>
+        
+        
+
+        <div class="playbar">
+            <span>0:14</span>
+            <span style="height: 0px; border-top: 10px solid white; border-radius: 5px; flex-grow: 1; box-sizing: content-box; margin-block:auto"></span>
+            <span>2:39</span>
+        </div>
+        <div class="controls">
+            <!-- previous -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M173-193v-574h94v574h-94Zm614 0L370-480l417-287v574Z"/></svg>
+            <!-- pause -->
+            <svg style="width:20vw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M359-314h71v-332h-71v332Zm171 0h71v-332h-71v332ZM480.14-55Q392-55 314.51-88.08q-77.48-33.09-135.41-91.02-57.93-57.93-91.02-135.27Q55-391.72 55-479.86 55-569 88.08-646.49q33.09-77.48 90.86-134.97 57.77-57.48 135.19-91.01Q391.56-906 479.78-906q89.22 0 166.83 33.45 77.6 33.46 135.01 90.81t90.89 134.87Q906-569.34 906-480q0 88.28-33.53 165.75t-91.01 135.28q-57.49 57.8-134.83 90.89Q569.28-55 480.14-55Z"/></svg>
+            <!-- next -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M693-193v-574h94v574h-94Zm-520 0v-574l417 287-417 287Z"/></svg>
+        </div>
+
+    </div>
 </body>
