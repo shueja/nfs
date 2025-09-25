@@ -1,5 +1,5 @@
 let cacheName = "my-first-pwa";
-let filesToCache = ["./", "./index.html", "./main.js"];
+let filesToCache = ["./", "./index.html", "./main.js", "./cover.jpg"];
 /* Start the service worker and cache all of the app's content */
 self.addEventListener("install", (e) => {
 e.waitUntil(
